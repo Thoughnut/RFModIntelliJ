@@ -18,5 +18,11 @@
   "sounds": [
     "rfmod:looij"
   ]
+},"grind": {
+  "category": "neutral",
+  "subtitle": "rfmod.grind",
+  "sounds": [
+    "rfmod:grind"
+  ]
 }
 }

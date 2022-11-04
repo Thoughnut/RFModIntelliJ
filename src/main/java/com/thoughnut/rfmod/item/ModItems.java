@@ -31,6 +31,11 @@ public class ModItems {
     public static final RegistryObject<Item> BROODJEHAMKAAS = ITEMS.register("broodjehamkaas",
             () -> new Item(new Item.Properties().group(ModItemGroup.RF_GROUP)
                     .food(new Food.Builder().hunger(6).saturation(0.2f).build())));
+    public static final RegistryObject<Item> GROUND_BEEF = ITEMS.register("ground_beef",
+            () -> new Item(new Item.Properties().group(ModItemGroup.RF_GROUP)
+                    .food(new Food.Builder().hunger(2).saturation(2f)
+                            .effect(() -> new EffectInstance(Effects.POISON, 400, 2), 1.0f)
+                            .effect(() -> new EffectInstance(Effects.NAUSEA, 400, 10), 1.0f).build())));
 
     //materials
     public static final RegistryObject<Item> RFINGOT = ITEMS.register("rf_ingot",

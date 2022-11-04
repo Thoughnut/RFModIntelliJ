@@ -4,7 +4,9 @@
   "item.rfmod.kaas": "§eKaas",
   "item.rfmod.broodjehamkaas": "Broodje Ham en Kaas",
   "item.rfmod.rf_ingot": "RF Staaf",
+  "item.rfmod.ground_beef": "Gehakt",
 
+  "screen.rfmod.meat_grinder": "Gehaktmolen",
 
   "block.rfmod.rf_ore": "RF Erts",
   "block.rfmod.rf_block": "RF Blok",

@@ -4,6 +4,7 @@
   "item.rfmod.kaas": "§eCheese",
   "item.rfmod.broodjehamkaas": "Ham and Cheese Sandwich",
   "item.rfmod.rf_ingot": "RF Ingot",
+  "item.rfmod.ground_beef": "Ground Meat",
 
   "item.rfmod.rf_boots": "RF Boots",
   "item.rfmod.rf_chestplate": "RF Chestplate",
@@ -24,6 +25,9 @@
   "block.rfmod.onion_crop": "Onion",
   "block.rfmod.leek_crop": "Leek",
   "block.rfmod.beef_tomato_crop": "Beef Tomato",
+
+  "screen.rfmod.meat_grinder": "Meat Grinder",
+
 
 
 

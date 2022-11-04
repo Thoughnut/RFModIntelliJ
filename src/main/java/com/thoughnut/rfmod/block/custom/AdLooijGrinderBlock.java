@@ -1,18 +1,42 @@
 package com.thoughnut.rfmod.block.custom;
 
+import com.thoughnut.rfmod.container.MeatGrinderContainer;
+import com.thoughnut.rfmod.tileentity.MeatGrinderTile;
+import com.thoughnut.rfmod.tileentity.ModTileEntitities;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.fml.network.NetworkHooks;
 
 import javax.annotation.Nullable;
+import java.io.Console;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class AdLooijGrinderBlock extends HorizontalBlock {
@@ -21,6 +45,7 @@ public class AdLooijGrinderBlock extends HorizontalBlock {
         super(builder);
     }
 
+    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     private static final VoxelShape SHAPE_N = Stream.of(
             Block.makeCuboidShape(5, 0, 5, 11, 8, 16),
             Block.makeCuboidShape(7, 5, 1, 9, 7, 5),
@@ -97,5 +122,58 @@ public class AdLooijGrinderBlock extends HorizontalBlock {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         return super.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing().getOpposite());
+    }
+
+    @Override
+    public boolean canConnectRedstone(BlockState state, IBlockReader world, BlockPos pos, @Nullable Direction side) {
+        return true;
+    }
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if(!worldIn.isRemote()){
+            TileEntity tileEntity = worldIn.getTileEntity(pos);
+
+            if(!player.isCrouching()){
+                if(tileEntity instanceof MeatGrinderTile){
+                    INamedContainerProvider containerProvider = createContainerProvider(worldIn,pos);
+
+                    NetworkHooks.openGui(((ServerPlayerEntity) player), containerProvider, tileEntity.getPos());
+                }else{
+                    throw new IllegalStateException("Container provider missing");
+                }
+            }else{
+                if(tileEntity instanceof MeatGrinderTile){
+                    ((MeatGrinderTile)tileEntity).checkMeats(pos, worldIn);
+                }
+            }
+        }
+        return ActionResultType.SUCCESS;
+    }
+
+    private INamedContainerProvider createContainerProvider(World worldIn, BlockPos pos) {
+        return new INamedContainerProvider() {
+            @Override
+            public ITextComponent getDisplayName() {
+                return new TranslationTextComponent("screen.rfmod.meat_grinder");
+            }
+
+            @Nullable
+            @Override
+            public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
+                return new MeatGrinderContainer(i, worldIn,pos,playerInventory,playerEntity);
+            }
+        };
+    }
+
+    @Nullable
+    @Override
+    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+        return ModTileEntitities.MEAT_GRINDER_TILE.get().create();
+    }
+
+    @Override
+    public boolean hasTileEntity(BlockState state) {
+        return true;
     }
 }

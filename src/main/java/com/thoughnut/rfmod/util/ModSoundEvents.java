@@ -16,6 +16,7 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> AD_STIK_1 = registerSoundEvent("ad_stik_1");
     public static final RegistryObject<SoundEvent> AD_STIK_2 = registerSoundEvent("ad_stik_2");
     public static final RegistryObject<SoundEvent> LOOIJ = registerSoundEvent("looij");
+    public static final RegistryObject<SoundEvent> GRIND = registerSoundEvent("grind");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name){
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(RFMod.MOD_ID, name)));

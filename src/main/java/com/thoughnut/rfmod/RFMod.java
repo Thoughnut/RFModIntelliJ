@@ -1,12 +1,16 @@
 package com.thoughnut.rfmod;
 
 import com.thoughnut.rfmod.block.ModBlocks;
+import com.thoughnut.rfmod.container.ModContainers;
 import com.thoughnut.rfmod.entity.ModEntityTypes;
 import com.thoughnut.rfmod.entity.render.AdLooijRenderer;
 import com.thoughnut.rfmod.item.ModItems;
+import com.thoughnut.rfmod.screen.MeatGrinderScreen;
+import com.thoughnut.rfmod.tileentity.ModTileEntitities;
 import com.thoughnut.rfmod.util.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,6 +45,9 @@ public class RFMod
 
         ModItems.registry(modEventBus);
         ModBlocks.register(modEventBus);
+        //TileEntities
+        ModTileEntitities.register(modEventBus);
+        ModContainers.register(modEventBus);
 
         ModSoundEvents.register(modEventBus);
 
@@ -74,10 +81,14 @@ public class RFMod
         RenderTypeLookup.setRenderLayer(ModBlocks.ADLOOIJFORNUIS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.ADLOOIJGRINDER.get(), RenderType.getCutout());
 
+
         //crops
         RenderTypeLookup.setRenderLayer(ModBlocks.ONION.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.LEEK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.BEEF_TOMATO.get(), RenderType.getCutout());
+
+        ScreenManager.registerFactory(ModContainers.MEAT_GRINDER_CONTAINER.get(),
+                MeatGrinderScreen::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
