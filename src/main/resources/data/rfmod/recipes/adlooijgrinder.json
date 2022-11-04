@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AA",
+    "AAB",
+    " BB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "rfmod:rf_block"
+    }
+  },
+  "result": {
+    "item": "rfmod:adlooijgrinder"
+  }
+}

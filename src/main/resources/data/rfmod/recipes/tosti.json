@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rfmod:broodjehamkaas"
+  },
+  "result": "rfmod:tosti",
+  "experience": 1.0,
+  "cookingtime": 200
+}

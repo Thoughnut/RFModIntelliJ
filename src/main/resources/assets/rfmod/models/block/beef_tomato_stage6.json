@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "rfmod:block/beef_tomato_stage6"
+  }
+}

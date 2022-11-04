@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "rfmod:adlooijfornuis"
+    },
+    "title": "Welcome to Ad's kitchen",
+    "description": "Obtain an Ad Looij Stove",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rfmod:rf_ingot",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "rfmod:adlooijfornuis"
+          }
+        ]
+      }
+    }
+  }
+}

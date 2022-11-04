@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "rfmod:kaas"
+    },
+    {
+      "item": "minecraft:bread"
+    },{
+      "item": "minecraft:cooked_porkchop"
+    }
+  ],
+  "result": {
+    "item": "rfmod:broodjehamkaas",
+    "count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BEB",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:obsidian"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "C": {
+      "item": "rfmod:rf_block"
+    },
+    "E": {
+      "item": "minecraft:redstone_torch"
+    }
+  },
+  "result": {
+    "item": "rfmod:adlooijfornuis"
+  }
+}

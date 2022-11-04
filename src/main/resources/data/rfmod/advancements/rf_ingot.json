@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "rfmod:rf_ingot"
+    },
+    "title": "Shine bright like a RF",
+    "description": "Obtain an RF Ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rfmod:rf_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "rfmod:rf_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rfmod:rf_ore"
+  },
+  "result": "rfmod:rf_ingot",
+  "experience": 2.0,
+  "cookingtime": 200
+}

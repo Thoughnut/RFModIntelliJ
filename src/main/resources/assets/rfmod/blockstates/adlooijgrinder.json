@@ -1,0 +1,20 @@
+
+{
+  "variants": {
+    "facing=east": {
+      "model": "rfmod:block/adlooijgrinder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "rfmod:block/adlooijgrinder"
+    },
+    "facing=south": {
+      "model": "rfmod:block/adlooijgrinder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rfmod:block/adlooijgrinder",
+      "y": 270
+    }
+  }
+}

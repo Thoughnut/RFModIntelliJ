@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "rfmod:rf_ore"
+    },
+    "title": "RF Mod",
+    "description": "The MBC Rules them all",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "rfmod:textures/block/rf_ore.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["rfmod:rf_ingot"]
+          }
+        ]
+      }
+    }
+  }
+}

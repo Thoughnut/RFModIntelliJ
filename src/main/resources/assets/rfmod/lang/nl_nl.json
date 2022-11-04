@@ -1,0 +1,39 @@
+{
+
+  "item.rfmod.tosti": "§6Tosti",
+  "item.rfmod.kaas": "§eKaas",
+  "item.rfmod.broodjehamkaas": "Broodje Ham en Kaas",
+  "item.rfmod.rf_ingot": "RF Staaf",
+
+
+  "block.rfmod.rf_ore": "RF Erts",
+  "block.rfmod.rf_block": "RF Blok",
+  "block.rfmod.adlooijfornuis": "Ad Looij's Fornuis",
+  "block.rfmod.adlooijgrinder": "Ad Looij's Gehaktmolen™",
+  "block.rfmod.onion_crop": "Ui",
+  "block.rfmod.leek_crop": "Prei",
+  "block.rfmod.beef_tomato_crop": "Vleestomaat",
+
+
+  "item.rfmod.rf_boots": "RF Schoenen",
+  "item.rfmod.rf_chestplate": "RF Borstplaat",
+  "item.rfmod.rf_leggings": "RF Broek",
+  "item.rfmod.rf_helmet": "RF Helm",
+
+  "item.rfmod.rf_axe": "RF Bijl",
+  "item.rfmod.rf_sword": "RF Zwaard",
+  "item.rfmod.rf_shovel": "RF Schep",
+  "item.rfmod.rf_pickaxe": "RF Pikhouweel",
+  "item.rfmod.rf_hoe": "RF Schoffel",
+
+
+  "itemGroup.RFModTab": "RF Tabje",
+
+  "tooltip.rfmod.tosti_shift": "De lekkerste RF maaltijd",
+  "tooltip.rfmod.tosti": "Druk op §bshift§r voor meer informatie",
+  "tooltip.rfmod.rf_ingot_shift": "Het meest schitterende RF object",
+  "tooltip.rfmod.rf_ingot": "Druk op §bshift§r voor meer informatie",
+
+  "item.rfmod.ad_looij_spawn_egg": "Ad Looij Spawn Egg",
+  "entity.rfmod.ad_looij": "Ad Looij"
+}

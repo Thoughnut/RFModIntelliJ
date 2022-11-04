@@ -1,0 +1,39 @@
+{
+
+  "item.rfmod.tosti": "§6Grilled Cheese Sandwich",
+  "item.rfmod.kaas": "§eCheese",
+  "item.rfmod.broodjehamkaas": "Ham and Cheese Sandwich",
+  "item.rfmod.rf_ingot": "RF Ingot",
+
+  "item.rfmod.rf_boots": "RF Boots",
+  "item.rfmod.rf_chestplate": "RF Chestplate",
+  "item.rfmod.rf_leggings": "RF Leggings",
+  "item.rfmod.rf_helmet": "RF Helmet",
+
+  "item.rfmod.rf_axe": "RF Axe",
+  "item.rfmod.rf_sword": "RF Sword",
+  "item.rfmod.rf_shovel": "RF Shovel",
+  "item.rfmod.rf_pickaxe": "RF Pickaxe",
+  "item.rfmod.rf_hoe": "RF Hoe",
+
+
+  "block.rfmod.rf_ore": "RF Ore",
+  "block.rfmod.rf_block": "RF Block",
+  "block.rfmod.adlooijfornuis": "Ad Looij's Stove",
+  "block.rfmod.adlooijgrinder": "Ad Looij's Meat Grinder™",
+  "block.rfmod.onion_crop": "Onion",
+  "block.rfmod.leek_crop": "Leek",
+  "block.rfmod.beef_tomato_crop": "Beef Tomato",
+
+
+
+  "itemGroup.RFModTab": "RF Tab",
+
+  "tooltip.rfmod.tosti_shift": "The most delicious RF meal out there",
+  "tooltip.rfmod.tosti": "Press §bshift§r for more info",
+  "tooltip.rfmod.rf_ingot_shift": "The most shiny RF item out there",
+  "tooltip.rfmod.rf_ingot": "Press §bshift§r for more info",
+
+  "item.rfmod.ad_looij_spawn_egg": "Ad Looij Spawn Egg",
+  "entity.rfmod.ad_looij": "Ad Looij"
+}

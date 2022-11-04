@@ -1,0 +1,22 @@
+{
+  "ad_stik_1": {
+    "category": "neutral",
+    "subtitle": "rfmod.ad_stik_1",
+    "sounds": [
+      "rfmod:ad_stik_1"
+    ]
+  },
+  "ad_stik_2": {
+  "category": "neutral",
+  "subtitle": "rfmod.ad_stik_2",
+  "sounds": [
+    "rfmod:ad_stik_2"
+  ]
+},"looij": {
+  "category": "neutral",
+  "subtitle": "rfmod.looij",
+  "sounds": [
+    "rfmod:looij"
+  ]
+}
+}
